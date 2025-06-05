@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>Add commentMore actions
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffeepicha</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #fefaf6;
+      color: #333;
+    }
+
+    header {
+      background-color: #e28743;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #e28743;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: white;
+      position: absolute;
+      right: 20px;
+      top: 25px;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #e28743;
+      text-align: center;
+    }
+
+    .mobile-nav a {
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.3);
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e28743;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .menu-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    .menu-item {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-item-content {
+      padding: 15px;
+    }
+
+    .menu-item-content h3 {
+      margin: 0 0 5px 0;
+      font-size: 18px;
+    }
+
+    .menu-item-content p {
+      margin: 0;
+      color: #e28743;
+      font-weight: bold;
+    }
+
+    .menu-item {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse; /* عکس‌ها در راست قرار می‌گیرند */
+  align-items: center;
+  height: 180px;
+}
+
+.menu-item img {
+  width: 180px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.menu-item-content {
+  padding: 15px;
+  flex: 1;
+}
+    footer {
+      background-color: #e28743;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .mobile-nav.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <h1>☕️ پی‌چا 🐈</h1>
+    <p>کافه‌ای با طعم زندگی</p>
+  </header>
+
+  <nav>
+    <a href="#about">درباره ما</a>
+    <a href="#menu">نوشیدنی‌ها</a>
+    <a href="#contact">تماس با ما</a>
+  </nav>
+
+  <div class="mobile-nav" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">درباره ما</a>
+    <a href="#menu" onclick="toggleMenu()">نوشیدنی‌ها</a>
+    <a href="#contact" onclick="toggleMenu()">تماس با ما</a>
+  </div>
+
+  <section id="about">
+    <h2>درباره پی‌چا</h2>
+    <p>ما در پی‌چا تلاش می‌کنیم تا بهترین تجربه قهوه‌خوری را برای شما فراهم کنیم. با قهوه‌های اصیل، دسرهای خاص و فضای دلنشین منتظر شما هستیم.</p>
+  </section>
+
+  <!-- 👇 قسمت منو نوشیدنی‌ها همان‌طور که قبلاً نوشتی درج شده -->
+  <section id="menu">
+    <h2>نوشیدنی‌ها</h2>
+    <div class="menu-section">
+        <div class="menu-item">
+            <img src="https://kasibeyaz.ir/wp-content/uploads/2024/05/IMG_3395.jpg" alt="۱۰۰٪ عربیکا">
+            <div class="menu-item-content">
+                <h3>اسپرسو</h3>
+              <p>۱۰۰٪ عربیکا</p>
+
+            </div>
+          </div>
+
+      <div class="menu-item">
+        <img src="https://koochinimenu.ir/wp-content/uploads/2024/02/DSC_62011.jpg" alt="۱۰۰٪ روبوستا">
+        <div class="menu-item-content">
+            <h3>اسپرسو</h3>
+            <p>۱۰۰٪ روبوستا</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://koochinimenu.ir/wp-content/uploads/2024/02/DSC_62011.jpg" alt="۶۰/۴۰ روبوستا">
+        <div class="menu-item-content">
+        <h3>اسپرسو</h3>
+
+          <p>۶۰/۴۰ روبوستا</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/05/IMG_3393-2.jpg" alt="آمریکانو">
+        <div class="menu-item-content">
+          <h3>آمریکانو</h3>
+          <p>۴۵,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://koochinimenu.ir/wp-content/uploads/2025/03/IMG_7897.jpeg" alt="نسکافه">
+        <div class="menu-item-content">
+          <h3>نسکافه</h3>
+          <p>۴۰,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/04/IMG_3387.jpg" alt="کاپوچینو">
+        <div class="menu-item-content">
+          <h3>کاپوچینو</h3>
+          <p>۶۵,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/05/IMG_3385.jpg" alt="لاته">
+        <div class="menu-item-content">
+          <h3>لاته</h3>
+          <p>۶۵,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/04/IMG_3386.jpg" alt="کارامل ماکیاتو">
+        <div class="menu-item-content">
+          <h3>کارامل ماکیاتو</h3>
+          <p>۷۰,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/04/IMG_3388.jpg" alt="موکا">
+        <div class="menu-item-content">
+          <h3>موکا</h3>
+          <p>۶۸,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/04/IMG_3392.jpg" alt="هات چاکلت">
+        <div class="menu-item-content">
+          <h3>هات چاکلت</h3>
+          <p>۵۸,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1590080875721-840994117660" alt="شیر کاکائو">
+        <div class="menu-item-content">
+          <h3>شیر کاکائو</h3>
+          <p>۳۸,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1566740933430-813fc87a87e7" alt="شیر گرم">
+        <div class="menu-item-content">
+          <h3>شیر گرم</h3>
+          <p>۳۵,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/04/IMG_3391.jpg" alt="ماسالا">
+        <div class="menu-item-content">
+          <h3>ماسالا</h3>
+          <p>۵۵,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://koochinimenu.ir/wp-content/uploads/2025/03/IMG_7899.jpeg" alt="چای کرک">
+        <div class="menu-item-content">
+          <h3>چای کرک</h3>
+          <p>۴۵,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/04/IMG_3398.jpg" alt="چای سیاه">
+        <div class="menu-item-content">
+          <h3>چای سیاه</h3>
+          <p>۳۰,۰۰۰ تومان</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://kasibeyaz.ir/wp-content/uploads/2024/04/IMG_3377.jpg" alt="دمنوش گیاهی">
+        <div class="menu-item-content">
+          <h3>دمنوش</h3>
+          <p>۳۵,۰۰۰ تومان</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <h2>تماس با ما</h2>
+    <p>📍 آدرس: ابتدای خیابان رادیو‌دریا</p>
+    <p>⏰ ساعت کاری: هر روز ۸:۳۰ صبح الی ۱۰ شب</p>
+    <p>📞 تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+    <p>📷 اینستاگرام: <a href="https://instagram.com/coffeepicha" target="_blank">@coffeepicha</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025  پی‌چا. تمام حقوق محفوظ است.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
